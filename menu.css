@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Light Gray Background */
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+}
+header {
+    background-color: #d3151f; /* Red header */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out header items */
+    padding: 20px;
+    position: static; /* Use 'sticky' instead of 'fixed' */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the title horizontally */
+}
+
+.custom-dropdown {
+    position: relative;
+    margin-left: 20px; /* Adjust margin to position dropdown */
+}
+
+.dropdown-button {
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #ffa500;
+    color: #fff;
+    cursor: pointer;
+    width: 160px; /* Button width */
+}
+
+.dropdown-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0; /* Align dropdown list to the left of the button */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    list-style-type: none;
+    padding: 0;
+    width: 200px; /* Dropdown width */
+    z-index: 1001; /* Ensure dropdown appears above other content */
+}
+
+.dropdown-list li {
+    padding: 10px;
+    background-color: #ffa500;
+    color: #fff;
+    cursor: pointer;
+}
+
+.dropdown-list li:hover {
+    background-color: #ffcc00; /* Hover effect */
+    color: #000;
+}
+
+.custom-dropdown:hover .dropdown-list {
+    display: block; /* Show dropdown on hover */
+}
+
+.cart-img {
+    margin-left:auto; /* Push the cart icon to the far right */
+    margin-right: 30px; /* Adjust spacing from the right */
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+
+
+/* Menu Section */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%; /* Keep the image spanning the full width of the container */
+    height: 200px; /* Increase the height to make the image taller */
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    border-radius: 10px; /* Maintain rounded edges */
+    margin-bottom: 15px; /* Maintain spacing below the image */
+}
+
+
+.menu-item h2 {
+    font-size: 1.2rem;
+    color: #d3151f;
+    margin: 10px 0;
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #000000;
+}
+
+.menu-item .price {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #e47d2b;
+    margin: 15px 0;
+}
+
+.menu-item button {
+    background: #d3151f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.menu-item button:hover {
+    background: #ad0c14;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+
+    header select {
+        margin-left: 0;
+    }
+
+    #menu {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    header select {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}

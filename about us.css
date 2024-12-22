@@ -1,0 +1,96 @@
+/* Reset default margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;               /* Enable flexbox for the body */
+    flex-direction: column;      /* Stack content vertically */
+    min-height: 100vh;           /* Ensure full height of the viewport */
+}
+
+/* Header Section */
+.about-header {
+    background-color: #b82727;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.about-header h1 {
+    margin: 0;
+}
+
+.about-header .back-button {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    background: #ffa500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    right: 20px; /* Position the button to the right */
+    top: 50%;
+    transform: translateY(-50%); /* Center it vertically relative to the header */
+}
+
+.about-header .back-button:hover {
+    background: #ff8c00;
+}
+
+/* About & Contact Section */
+.about-contact-section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+    text-align: left;
+    flex-grow: 1;  /* Allows the content section to take up remaining space */
+}
+
+.about-contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #eb3131;
+}
+
+.about-contact-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Contact Info Section */
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.contact-info a {
+    color: #eb3131;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;  /* Pushes the footer to the bottom of the page */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}

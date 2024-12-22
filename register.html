@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registration Page">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="register">
+            <h2>Register</h2>
+            <form action="register_backend.php" method="post" onsubmit="return handleRegistration(event)">
+                <input type="text" name="username" placeholder="User Name" id="user" required>
+                <input type="text" name="address" placeholder="Address" id="address" required>
+                <input type="text" name="phone_number" placeholder="Phone Number" id="phone" required>
+                <input type="password" name="password" placeholder="Password" id="password" minlength="8" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function handleRegistration(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target; // Get the form element
+            const passwordField = form.querySelector("#password"); // Get the password field
+
+            // Check if password length is less than 8 characters
+            if (passwordField.value.length < 8) {
+                alert("Password must be at least 8 characters long.");
+                return false; // Prevent form submission if password is too short
+            }
+
+            // If password is valid, proceed with form submission (AJAX or normal submit)
+            const formData = new FormData(form); // Collect form data
+
+            fetch('register_backend.php', {
+                method: 'POST',
+                body: formData,
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert(data.message);
+                        window.location.href = 'login.html'; // Redirect to login page
+                    } else {
+                        alert(data.message); // Show error message
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baba Johns Menu</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <script src="cart.js"></script>
+    <script src="menu.js"></script>
+    <header>
+        <h1>Menu</h1>
+        <div class="custom-dropdown">
+            <button class="dropdown-button" onclick="toggleDropdown()">All menu</button>
+            <ul class="dropdown-list">
+                <li onclick="selectOption('all')">All</li>
+                <li onclick="selectOption('pizza')">Pizza</li>
+                <li onclick="selectOption('dessert')">Dessert</li>
+                <li onclick="selectOption('cold-drinks')">Cold Drinks</li>
+                <li onclick="selectOption('hot-drinks')">Hot Drinks</li>
+            </ul>
+        </div>
+        <img src="cart4.jpg" alt="View Cart" class="cart-img" onclick="location.href='cart.html'">
+    </header>
+    <main>
+        <section id="menu">
+            <!-- Pizza Menu -->
+            <div class="menu-item pizza">
+                <img src="Margherita.jpg" alt="Margherita">
+                <h2>Margherita</h2>
+                <p>pizza with rich, tomato sauce, creamy mozzarella, and fresh basil leaves</p>
+                <p class="price">300LE</p>
+                <button class="add-to-cart" onclick="addToCart('Margherita', '300')">Add to Cart</button>
+            </div>
+            <div class="menu-item pizza">
+                <img src="6-Cheese.jpg" alt="6 Cheese">
+                <h2>6 Cheese</h2>
+                <p>pizza with mix of six cheeses (mozzarella, cheddar, parmesan)</p>
+                <p class="price">350LE</p>
+                <button class="add-to-cart" onclick="addToCart('6 Cheese', '350')">Add to Cart</button>
+            </div>
+            <div class="menu-item pizza">
+                <img src="3-Cheese-2-Toppings.jpg" alt="3 Cheese X 2 Toppings" title="3 Cheese X 2 Toppings">
+                <h2>3 Cheese and 2 Toppings</h2>
+                <p>A mixof 3 delicious cheeses with 2 toppings of your choice</p>
+                <p class="price">400LE</p>
+                <button class = "add-to-cart "onclick="addToCart('3 Cheese X 2 Toppings', '400')">Add to Cart</button>
+            </div>
+            <div class="menu-item pizza">
+                <img src="Super-Papa.jpg" alt="Super Papa's" title="Super Papa">
+                <h2>Super Papa</h2>
+                <p>Pepperoni, Italian Sausage, Onions, Green Pepper,Mushroom, Olives</p>
+                <p class="price">500LE</p>
+                <button class = "add-to-cart" onclick="addToCart('Super Papa', '500')">Add to Cart</button>
+            </div>
+            <div class="menu-item pizza">
+                <img src="Little-Italy.jpg" alt="Little Italy" title="Little Italy">
+                <h2>Little Italy</h2>
+                <p>Pepperoni, Italian Sausage,  Mushroom,  Olives</p>
+                <p class="price">550LE</p>
+                <button class = "add-to-cart" onclick="addToCart('Little Italy', '550')">Add to Cart</button>
+            </div>
+            <div class="menu-item pizza">
+                <img src="Pepperoni.jpg" alt="Pepperoni" title="Pepperoni">
+                <h2>Pepperoni</h2>
+                <p> Pepperoni and Extra Mozzarella Cheese</p>
+                <p class="price">525LE</p>
+                <button class = "add-to-cart" onclick="addToCart('Pepperoni', '525')">Add to Cart</button>
+            </div>
+            <div class="menu-item pizza">
+                <img src="Spicy-Pepperoni-Ranch-Pizza.jpg" alt="Spicy Pepperoni Ranch" title="Spicy Pepperoni Ranch">
+                <h2>Spicy Pepperoni Ranch</h2>
+                <p>Pepperoni, Jalapeno, Mozzarella Cheese and Ranch Sauce</p>
+                <p class="price">475LE</p>
+                <button class = "add-to-cart" onclick="addToCart('Spicy Pepperoni Ranch', '475')">Add to Cart</button>
+            </div>
+            <div class="menu-item pizza">
+                <img src="Hot-Spicy.jpg" alt="Hot & Spicy" title="Hot & Spicy">
+                <h2>Hot & Spicy</h2>
+                <p>Italian Sausage, Tomato, Onions, Green Pepper, Jalapeno</p>
+                <p class="price">500LE</p>
+                <button class = "add-to-cart" onclick="addToCart('Hot-Spicy', '500')">Add to Cart</button>
+            </div>
+            <div class="menu-item pizza">
+                <img src="cheese-burger.jpg" alt="Cheese Burger" title="Cheese Burger">
+                <h2>Cheese Burger</h2>
+                <p>Italian Sausage, Tomato, Onion, Mozzarella Cheese with Burger Sauce</p>
+                <p class="price">370LE</p>
+                <button class = "add-to-cart" onclick="addToCart('Cheese Burger', '370')">Add to Cart</button>
+            </div>
+            <div class="menu-item pizza">
+                <img src="Chicken-BBQ.jpg" alt="Chicken BBQ" title="Chicken BBQ">
+                <h2>Chicken BBQ</h2>
+                <p>Grilled Chicken, Onions, Mushroom, BBQ Sauce</p>
+                <p class="price">450LE</p>
+                <button class = "add-to-cart" onclick="addToCart('Chicken BBQ', '450')">Add to Cart</button>
+            </div>
+            </div>
+            <div class="menu-item pizza">
+                <img src="Mexican-Ole .jpg" alt="Mexican Ole">
+                <h2>Mexican Ole</h2>
+                <p>Grilled Chicken, Tomato, Onions, Green Pepper, Fresh Mushroom, Jalapeno</p>
+                <p class="price">400LE</p>
+                <button class="add-to-cart" onclick="addToCart('Mexican Ole', '400')">Add to Cart</button>
+            </div>
+            </div>
+            <div class="menu-item pizza">
+            <img src="Shrimps.jpg" alt="Shrimps">
+            <h2>Shrimps</h2>
+            <p>Shrimps, Tomato, Onions, Green Pepper</p>
+            <p class="price">450LE</p>
+            <button class="add-to-cart" onclick="addToCart('Shrimps', '450')">Add to Cart</button>
+            </div>
+            <!-- Dessert Menu ########################################################## -->
+            <div class="menu-item dessert">
+                <img src="images.jpg" alt="Chocolate Cake">
+                <h2>Chocolate Cake</h2>
+                <p>A fluffy chocolate cake</p>
+                <p class="price">65LE</p>
+                <button class="add-to-cart" onclick="addToCart('Chocolate Cake', '65')">Add to Cart</button>
+            </div>
+            <div class="menu-item dessert">
+                <img src="blueberry-cheesecake-.jpg" alt="Blueberry Cheesecake">
+                <h2>Blueberry Cheesecake</h2>
+                <p> cheesecake and Blueberry sauce</p>
+                <p class="price">40LE</p>
+                <button class="add-to-cart" onclick="addToCart('Blueberry Cheesecake', '40')">Add to Cart</button>
+            </div>
+            <div class="menu-item dessert">
+                <img src="Chocolate-Cupcakes.jpg" alt="Cupckakes" title="Chocolate Raspberry Cupcakes">
+                <h2>Cupcakes</h2>
+                <p>A delicious Chocolate cupcake   </p>
+                <p class="price">60LE</p>
+                <button class="add-to-cart" onclick="addToCart('Chocolate Raspberry Cupcakes', '60')">Add to Cart</button>
+            </div>
+            <div class="menu-item dessert">
+                <img src="cookie.jpg" alt="cookies" title="cookies">
+                <h2>cookies </h2>
+                <p>cookies with chocolate chips</p>
+                <p class="price">30LE</p>
+                <button class="add-to-cart" onclick="addToCart('cookies', '30')">Add to Cart</button>
+            </div>
+            <div class="menu-item dessert">
+                <img src="OREO-JAR.jpg" alt="oreo jar" title="oreo jar">
+                <h2>oreo jar</h2>
+                <p>jar of areo and chocolate sauce </p>
+                <p class="price">70LE</p>
+                <button class="add-to-cart" onclick="addToCart('oreo jar', '70')">Add to Cart</button>
+            </div>
+            <div class="menu-item dessert">
+                <img src="brownie.jpg" alt="brownese" title="brownese">
+                <h2>brownese cake </h2>
+                <p>Brownese with vanillia icecream </p>
+                <p class="price">55LE</p>
+                <button class="add-to-cart" onclick="addToCart('brownese', '55')">Add to Cart</button>
+            </div>
+            <div class="menu-item dessert">
+                <img src="ice.jpg" alt="Ice-Cream" title="Ice-Cream">
+                <h2>Ice-Cream </h2>
+                <p> A delicious  Ice-Cream</p>
+                <p class="price">65LE</p>
+                <button class="add-to-cart" onclick="addToCart('Ice-Cream', '65')">Add to Cart</button>
+            </div>
+            <div class="menu-item dessert">
+                <img src="waffles.jpg" alt="waffles" title="waffles">
+                <h2>waffles </h2>
+                <p> waffles with honey and strawberry</p>
+                <p class="price">70LE</p>
+                <button class="add-to-cart" onclick="addToCart('waffles', '70')">Add to Cart</button>
+            </div>
+            <!-- Cold Drinks #################################################################-->
+            <div class="menu-item cold-drinks">
+                <img src="Chocolate-Milkshake.jpg" alt="Chocolate Milkshake">
+                <h2>Chocolate Milkshake</h2>
+                <p>Chocolate milkshake with ice cream</p>
+                <p class="price">75LE</p>
+                <button class="add-to-cart" onclick="addToCart('Chocolate Milkshake', '75')">Add to Cart</button>
+            </div>
+            <div class="menu-item cold-drinks">
+                <img src="caramel-milkshake.jpg" alt="caramel milkshakes" title="caramel milkshakes">
+                <h2>caramel milkshakes</h2>
+                <p>A caramel milkshakes with lotus sauce</p>
+                <p class="price">75LE</p>
+                <button class="add-to-cart" onclick="addToCart('caramel milkshakes', '75')">Add to Cart</button>
+            </div>
+            <div class="menu-item cold-drinks">
+                <img src="cola2.jpg" alt="Cola">
+                <h2>Cola</h3>
+                <p>Classic cola to quench your thirst.</p>
+                <p class="price">30LE</p>
+                <button class="add-to-cart" onclick="addToCart('cola', '35')">Add to Cart</button>
+            </div>
+            <div class="menu-item cold-drinks">
+                <img src="orange.jpg" alt="Orange Juice">
+                <h2>Orange Juice</h3>
+                <p>Freshly squeezed orange juice.</p>
+                <p class="price">50LE</p>
+                <button class="add-to-cart" onclick="addToCart('orange juice', '50')">Add to Cart</button>
+            </div>
+            <!-- Hot Drinks ################################################################### -->
+            <div class="menu-item hot-drinks">
+                <img src="turkish cofee.jpg" alt="Turkish Coffee">
+                <h2>Turkish Coffee</h2>
+                <p>Rich Turkish coffee</p>
+                <p class="price">35LE</p>
+                <button class="add-to-cart" onclick="addToCart('Turkish Coffee', '35')">Add to Cart</button>
+            </div>
+            <div class="menu-item hot-drinks">
+                <img src="tea2.jpg" alt="tea" title="tea">
+                <h2>tea</h2>
+                <p>A Hot cup of Tea </p>
+                <p class="price">20LE</p>
+                <button class="add-to-cart" onclick="addToCart('tea', '20')">Add to Cart</button>
+            </div>
+            <div class="menu-item hot-drinks">
+                <img src="Capuccino.jpg" alt="Cappuccino">
+                <h2>Cappuccino</h3>
+                <p>coffee topped with creamy foam.</p>
+                <p class="price">70LE</p>
+                <button class="add-to-cart" onclick="addToCart('Cappuccino', '70')">Add to Cart</button>
+            </div>
+            <div class="menu-item hot-drinks">
+                <img src="hot.jpg" alt="Hot Chocolate">
+                <h2>Hot Chocolate</h3>
+                <p>Sweet and creamy chocolate drink.</p>
+                <p class="price">60LE</p>
+                <button class="add-to-cart" onclick="addToCart('Cappuccino', '70')">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="collage website">
+        <title>Login Page</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+        <div class="background"></div> <!-- Background image div -->
+        <div class="container">
+            <div class="login-form">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="text" name="username" placeholder="Username" id="user" required>
+                    <input type="password" name="password" minlength="8" maxlength="16" placeholder="Password" id="pass" required>
+                    <div class="register">
+                        <span>No account? Please <a href="Register.html" title="Register">Register</a></span>
+                    </div>
+                    <button type="submit">Login</button>
+                    <p id="errorMessage" style="color: red; display: none;">Invalid username or password.</p> <!-- Error message -->
+                </form>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form from submitting normally
+                
+                const formData = new FormData(this);
+
+                fetch('login.php', {
+                    method: 'POST',
+                    body: formData,
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const errorMessage = document.getElementById('errorMessage');
+
+                    if (data.success) {
+                        window.location.href = 'menu.html'; // Redirect to menu if login is successful
+                    } else {
+                        errorMessage.textContent = data.message;
+                        errorMessage.style.display = 'block'; // Show error message
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        </script>
+    </body>
+</html>
